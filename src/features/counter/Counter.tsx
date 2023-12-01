@@ -10,7 +10,17 @@ class Counter extends React.Component<{},Count>{
         this.state={
             count:0
         }
+        /*If you are not using arrow function for event handling. The below Statement is must for binding with functions.      
+        this.increment=this.increment.bind(this)
+        */
     }
+    /* If we are working in old projects that don't use arrow function then call its reference incide constructor
+    increment(){
+        this.setState({
+            count:this.state.count+1
+        })
+    }
+    */
     increment=()=>{
         this.setState({
             count:this.state.count+1
